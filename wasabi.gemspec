@@ -14,11 +14,11 @@ Gem::Specification.new do |s|
   s.rubyforge_project = s.name
   s.license = 'MIT'
 
-  s.add_dependency "httpi",    "~> 2.0"
-  s.add_dependency "nokogiri", ">= 1.4.2"
+  s.add_dependency "httpi",    "~> 2.3"
+  s.add_dependency "nokogiri", ">= 1.6.0"
 
-  s.add_development_dependency "rake",  "~> 0.9"
-  s.add_development_dependency "rspec", "~> 2.14"
+  s.add_development_dependency "rake"
+  s.add_development_dependency "rspec"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

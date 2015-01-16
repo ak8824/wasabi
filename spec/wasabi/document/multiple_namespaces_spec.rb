@@ -34,20 +34,20 @@ describe Wasabi::Document do
     describe '#type_namespaces' do
       subject { super().type_namespaces }
       it do
-      should =~ [
+      expect { subject =~ [
         [["Save"], "http://example.com/actions"],
         [["Save", "article"], "http://example.com/actions"],
         [["Article"], "http://example.com/article"],
         [["Article", "Author"], "http://example.com/article"],
         [["Article", "Title"], "http://example.com/article"]
-      ]
+      ]}
     end
     end
 
     describe '#type_definitions' do
       subject { super().type_definitions }
       it do
-      should =~ [ [["Save", "article"], "Article"] ]
+      expect { subject =~ [ [["Save", "article"], "Article"] ] }
     end
     end
 
